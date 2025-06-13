@@ -17,7 +17,7 @@ class DrawPanel extends JPanel implements MouseListener {
     private boolean LoseMessage = false;
 
     public DrawPanel() {
-        button = new Rectangle(147, 100, 160, 26);
+        button = new Rectangle(147, 250, 160, 26);
         replace = new Rectangle(330, 25, 160, 26);
         deck = Card.buildDeck();
         this.addMouseListener(this);
@@ -27,7 +27,7 @@ class DrawPanel extends JPanel implements MouseListener {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        int x = 50;
+        int x = 120;
         int y = 10;
 
         int cardNumber = 0;

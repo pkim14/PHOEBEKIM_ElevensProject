@@ -18,9 +18,9 @@ public class Card {
     public Card(String suit, String value) {
         this.suit = suit;
         this.value = value;
-        this.imageFileName = "images/card_" + suit + "_" + value + ".png";
+        this.imageFileName = "images/card_images/card_" + suit + "_" + value + ".png";
         this.show = true;
-        this.backImageFileName = "images/card_back.png";
+        this.backImageFileName = "images/card_images/card_back.png";
         this.image = readImage();
         this.cardBox = new Rectangle(-100, -100, image.getWidth(), image.getHeight());
         this.highlight = false;
@@ -98,7 +98,7 @@ public class Card {
     public static ArrayList<Card> buildHand() {
         ArrayList<Card> deck = Card.buildDeck();
         ArrayList<Card> hand = new ArrayList<Card>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 9; i++) {
             int r = (int) (Math.random() * deck.size());
             Card c = deck.remove(r);
             hand.add(c);
