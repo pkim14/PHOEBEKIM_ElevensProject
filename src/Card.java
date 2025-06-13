@@ -237,7 +237,7 @@ public class Card {
                     }
                 }
             }
-            if (totalSum == 1) {
+            if (totalSum == 11) {
                 canEliminate = true;
             }
         }

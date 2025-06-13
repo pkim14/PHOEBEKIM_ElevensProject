@@ -34,7 +34,7 @@ class DrawPanel extends JPanel implements MouseListener {
         int temp = 0;
 
         for (int i = 0; i < hand.size(); i++) {
-            Card c = hand.get(i);
+            Card c = hand.get(cardNumber);
             if (c.getHighlight()) {
                 // draws the border around the card
                 g.drawRect(x, y, c.getImage().getWidth(), c.getImage().getHeight());
@@ -61,7 +61,6 @@ class DrawPanel extends JPanel implements MouseListener {
     }
 
     public void mousePressed(MouseEvent e) {
-
         Point clicked = e.getPoint();
 
         if (e.getButton() == 1) {
@@ -74,7 +73,7 @@ class DrawPanel extends JPanel implements MouseListener {
             for (int i = 0; i < hand.size(); i++) {
                 Rectangle box = hand.get(i).getCardBox();
                 if (box.contains(clicked)) {
-                    hand.get(i).flipCard();
+                    hand.get(i).flipHighlight();
                 }
             }
 
